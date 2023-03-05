@@ -56,13 +56,14 @@ namespace Testing1
             Assert.AreEqual(aCustomer.Pass, TestData);
 
         }
+
         [TestMethod]
         public void IDProperytOk()
         {
             clsCustomer aCustomer = new clsCustomer();
             Int32 TestData = 1;
             aCustomer.ID = TestData;
-            Assert.AreEqual(aCustomer.Pass, TestData);
+            Assert.AreEqual(aCustomer.ID, TestData);
 
         }
     }
