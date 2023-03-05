@@ -10,8 +10,8 @@ namespace Testing1
         [TestMethod]
         public void InstanceOK()
         {
-            clsAddress anAddress = new clsAddress();
-            Assert.IsNotNull(anAddress);
+            clsCustomer aCustomer = new clsCustomer();
+            Assert.IsNotNull(aCustomer);
         }
     }
 }
