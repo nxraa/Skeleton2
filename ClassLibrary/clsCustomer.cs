@@ -4,6 +4,7 @@ namespace ClassLibrary
 {
     public class clsCustomer
     {
+
         public bool Active { get; set; }
         public DateTime DateAdded { get; set; }
         public string Name { get; set; }
