@@ -17,10 +17,10 @@ public partial class _1_DataEntry : System.Web.UI.Page
     {
        clsCustomer aCustomer = new clsCustomer();
         //TOOO DOOO
-        aCustomer.Name = txtName.Text;
         aCustomer.ID = Convert.ToInt32(txtCustomerID.Text);
-        aCustomer.Pass = txtPassword.Text;
+        aCustomer.Name = txtName.Text;
         aCustomer.Email = txtEmail.Text;
+        aCustomer.Pass = txtPassword.Text;
         aCustomer.DateAdded = Convert.ToDateTime(txtDate.Text);
         aCustomer.Active = chkActive.Checked;
 
