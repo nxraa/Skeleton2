@@ -13,6 +13,12 @@ public partial class _1Viewer : System.Web.UI.Page
         clsCustomer aCustomer = new clsCustomer();
         aCustomer = (clsCustomer)Session["aCustomer"];
         Response.Write(aCustomer.Name);
+        Response.Write(aCustomer.ID);
+        Response.Write(aCustomer.Pass);
+        Response.Write(aCustomer.Email);
+        Response.Write(aCustomer.DateAdded);
+        Response.Write(aCustomer.Active);
+
 
     }
 }

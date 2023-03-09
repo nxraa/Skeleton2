@@ -30,7 +30,7 @@ namespace Testing1
             Assert.AreEqual(aCustomer.DateAdded, TestData);
         }
         [TestMethod]
-        public void NameProperytOk()
+        public void NamePropertyOk()
         {
             clsCustomer aCustomer = new clsCustomer();
             string TestData = "Aaron";
