@@ -66,5 +66,52 @@ namespace Testing1
             Assert.AreEqual(aCustomer.ID, TestData);
 
         }
+
+        [TestMethod]
+
+        public void FindMethodOK()
+        {
+            clsCustomer aCustomer = new clsCustomer();
+            Boolean Found = false;
+            string Name = "Aaron";
+            Found = aCustomer.Find(Name);
+            Assert.IsTrue(Found);
+        }
+
+        [TestMethod]
+
+        public void TestNameFound()
+        {
+            clsCustomer aCustomer = new clsCustomer();
+            Boolean Found = false;
+            Boolean OK = true;
+            string Name = "Aaron";
+            Found = aCustomer.Find(Name);
+            if(aCustomer.Name != "Aaron")
+            {
+                OK = false;
+            }
+
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+
+        public void TestCustomerIDFound()
+        {
+            clsCustomer aCustomer = new clsCustomer();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ID = 4;
+            Found = aCustomer.Find(ID);
+            if (aCustomer.ID != 4)
+            {
+                OK = false;
+            }
+
+            Assert.IsTrue(OK);
+        }
+
+
     }
 }
