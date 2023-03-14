@@ -73,8 +73,8 @@ namespace Testing1
         {
             clsCustomer aCustomer = new clsCustomer();
             Boolean Found = false;
-            string Name = "Aaron";
-            Found = aCustomer.Find(Name);
+            Int32 ID = 4;
+            Found = aCustomer.Find(ID);
             Assert.IsTrue(Found);
         }
 
@@ -85,8 +85,8 @@ namespace Testing1
             clsCustomer aCustomer = new clsCustomer();
             Boolean Found = false;
             Boolean OK = true;
-            string Name = "Aaron";
-            Found = aCustomer.Find(Name);
+            Int32 ID = 4;
+            Found = aCustomer.Find(ID);
             if(aCustomer.Name != "Aaron")
             {
                 OK = false;
@@ -105,6 +105,71 @@ namespace Testing1
             Int32 ID = 4;
             Found = aCustomer.Find(ID);
             if (aCustomer.ID != 4)
+            {
+                OK = false;
+            }
+
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+
+        public void TestDateAddedFound()
+        {
+            clsCustomer aCustomer = new clsCustomer();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ID = 4;
+            Found = aCustomer.Find(ID);
+            if (aCustomer.DateAdded != Convert.ToDateTime("16/05/2021"))
+            {
+                OK = false;
+            }
+
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+
+        public void TestEmailFound()
+        {
+            clsCustomer aCustomer = new clsCustomer();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ID = 4;
+            Found = aCustomer.Find(ID);
+            if (aCustomer.Email != "aaron04@gmail.com")
+            {
+                OK = false;
+            }
+
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+
+        public void TestPassFound()
+        {
+            clsCustomer aCustomer = new clsCustomer();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ID = 4;
+            Found = aCustomer.Find(ID);
+            if (aCustomer.Pass != "taurus")
+            {
+                OK = false;
+            }
+
+            Assert.IsTrue(OK);
+        }
+        [TestMethod]
+
+        public void TestActiveFound()
+        {
+            clsCustomer aCustomer = new clsCustomer();
+            Boolean Found = false;
+            Boolean OK = true;
+            Int32 ID = 4;
+            Found = aCustomer.Find(ID);
+            if (aCustomer.Active != true)
             {
                 OK = false;
             }

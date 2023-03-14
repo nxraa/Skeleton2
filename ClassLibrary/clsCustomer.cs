@@ -6,9 +6,36 @@ namespace ClassLibrary
     {
         private string mName;
         private Int32 mID;
+        private DateTime mDateAdded;
+        private string mEmail;
+        private string mPass;
+        private Boolean mActive;
 
-        public bool Active { get; set; }
-        public DateTime DateAdded { get; set; }
+
+        public bool Active
+        {
+            get
+            {
+                return mActive;
+            }
+            set
+            {
+                mActive = value;
+            }
+        }
+        public DateTime DateAdded
+        {
+            get
+            {
+                
+                return mDateAdded;
+            }
+            set
+            {
+                mDateAdded = value;
+            }
+        }
+        
         public string Name
         {
             get
@@ -20,8 +47,33 @@ namespace ClassLibrary
                 mName = value;
             }
         }
-        public string Email { get; set; }
-        public string Pass { get; set; }
+        public string Email
+        {
+            get
+            {
+                
+
+                return mEmail;
+            }
+            set
+            {
+                mEmail = value;
+            }
+        }
+
+        public string Pass
+        {
+            get
+            {
+                return mPass;
+
+            }
+            set
+            {
+               
+            }
+        }
+
 
         public int ID
         {
@@ -35,15 +87,15 @@ namespace ClassLibrary
             }
         }
 
-        public bool Find(string Name)
-        {
-            mName = "Aaron";
-            return true;
-        }
 
         public bool Find(int iD)
         {
             mID = 4;
+            mName = "Aaron";
+            mEmail = "aaron04@gmail.com";
+            mPass = "taurus";
+            mDateAdded = Convert.ToDateTime(16 / 02 / 2021);
+            mActive = true;
             return true;
             
         }
