@@ -27,7 +27,7 @@ namespace ClassLibrary
         {
             get
             {
-                
+
                 return mDateAdded;
             }
             set
@@ -35,7 +35,7 @@ namespace ClassLibrary
                 mDateAdded = value;
             }
         }
-        
+
         public string Name
         {
             get
@@ -51,7 +51,7 @@ namespace ClassLibrary
         {
             get
             {
-                
+
 
                 return mEmail;
             }
@@ -70,7 +70,7 @@ namespace ClassLibrary
             }
             set
             {
-               
+
             }
         }
 
@@ -87,9 +87,29 @@ namespace ClassLibrary
             }
         }
 
-        
-        
-          
-            
+        public bool Find(int iD)
+        {
+            clsDataConnection DB = new clsDataConnection();
+            DB.addParameter("@ID", ID);
+            DB.Execute("sproc_tblCustomer_FilterByCustomerID");
+            if (DB.Count == 1)
+            {
+                mID = Convert.ToInt32(DB.DataTable.Rows[0]["CustomerID"]);
+                mName = Convert.ToString(DB.DataTable.Rows[0]["CustomerName"]);
+                mEmail = Convert.ToString(DB.DataTable.Rows[0]["CustomerEmail"]);
+                mPass = Convert.ToString(DB.DataTable.Rows[0]["CustomerPassword"]);
+                mDateAdded = Convert.ToDateTime(DB.DataTable.Rows[0]["CustomerDate"]);
+                mActive = Convert.ToBoolean(DB.DataTable.Rows[0]["AccountActive"]);
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
+
+
+
         }
     }
+}
