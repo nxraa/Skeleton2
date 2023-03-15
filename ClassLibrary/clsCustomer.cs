@@ -89,8 +89,8 @@ namespace ClassLibrary
 
         public bool Find(int iD)
         {
-            clsDataConnection DB = new clsDataConnection();
-            DB.addParameter("@ID", ID);
+            clsCustomerConnection DB = new clsCustomerConnection();
+            DB.AddParameter("@ID", iD);
             DB.Execute("sproc_tblCustomer_FilterByCustomerID");
             if (DB.Count == 1)
             {
